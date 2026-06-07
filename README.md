@@ -45,6 +45,3 @@ The model trains automatically on first startup (~2 seconds).
 | GET | `/alerts/` | Live disruption alerts |
 
 Interactive docs at: **[http://localhost:8000/docs](https://supplyguard-api-dp47.onrender.com/docs)**
-3. Build command: `pip install -r requirements.txt`
-4. Start command: `uvicorn main:app --host 0.0.0.0 --port $PORT`
-5. Set env var `REACT_APP_API_URL` in your React app to the Render URL
