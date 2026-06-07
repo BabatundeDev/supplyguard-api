@@ -44,4 +44,4 @@ The model trains automatically on first startup (~2 seconds).
 | GET | `/forecast/all-materials` | Forecast all materials |
 | GET | `/alerts/` | Live disruption alerts |
 
-Interactive docs at: **[http://localhost:8000/docs](https://supplyguard-api-dp47.onrender.com/docs)**
+Interactive docs at: **(https://supplyguard-api-dp47.onrender.com/docs)**
