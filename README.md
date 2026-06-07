@@ -44,34 +44,7 @@ The model trains automatically on first startup (~2 seconds).
 | GET | `/forecast/all-materials` | Forecast all materials |
 | GET | `/alerts/` | Live disruption alerts |
 
-Interactive docs at: **http://localhost:8000/docs**
-
-## Connect to React Frontend
-
-Copy `supplyguardApi.js` into your React project at `src/api/supplyguardApi.js`.
-
-Then in any component:
-
-```js
-import { getAllSuppliers, getDemandForecast, getAlerts } from "../api/supplyguardApi";
-
-useEffect(() => {
-  getAllSuppliers().then(data => setSuppliers(data.suppliers));
-  getDemandForecast("Semiconductors", 12).then(data => setForecast(data.forecast));
-  getAlerts().then(data => setAlerts(data.alerts));
-}, []);
-```
-
-## Model Performance
-
-- Risk model: GradientBoostingRegressor | R² = 0.983 | CV across 5 folds
-- Forecast model: Prophet | Yearly + quarterly seasonality | 80% confidence intervals
-- Top risk driver: `country_risk` followed by `geo_score`
-
-## Deployment (free tier)
-
-1. Push to GitHub
-2. Connect repo to **Render.com** (free tier)
+Interactive docs at: **[http://localhost:8000/docs](https://supplyguard-api-dp47.onrender.com/docs)**
 3. Build command: `pip install -r requirements.txt`
 4. Start command: `uvicorn main:app --host 0.0.0.0 --port $PORT`
 5. Set env var `REACT_APP_API_URL` in your React app to the Render URL
